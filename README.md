@@ -1,3 +1,61 @@
+# Hello
+
+This is a forked repository of [FAST_LIO](https://github.com/hku-mars/FAST_LIO).
+
+In this we add extra script and configuration files to quickly run the experiments on [NTU VIRAL dataset](https://ntu-aris.github.io/ntu_viral_dataset/).
+
+## Dependences
+
+I modified a little, delete the livox code that no those extra driver dependences:
+
+- ROS noetic desktop-full, Ubuntu 20.04
+
+- glog, gflag: for debug, install it quickly with command here:
+
+  ```bash
+  # maybe need sudo if you are running it in your desktop
+  curl -sL https://raw.githubusercontent.com/Kin-Zhang/Kin-Zhang/main/Dockerfiles/setup_lib.sh | bash
+  ```
+
+## Build
+
+```bash
+cd ~/workspace/FAST_LIO/src
+git clone https://github.com/Kin-Zhang/FAST_LIO.git
+cd FAST_LIO
+git submodule update --init
+cd ../..
+catkin_make
+
+# select what terminal you use
+source devel/setup.zsh # source devel/setup.bash
+```
+
+## RUN ONE
+
+
+Download any seq you want in [NTU VIRAL dataset](https://ntu-aris.github.io/ntu_viral_dataset/). Extract it and copy the path
+
+```bash
+roslaunch fast_lio mapping_NTUviral.launch bag_file:="/home/kin/bags/ntu_viral/eee_01/eee_01.bag"
+```
+
+You will see the pop up rviz window like this one:
+
+![](doc/example_NTUViral.png)
+
+## RUN ALL
+
+
+
+
+
+
+
+---
+<details>
+  <summary>[Please check the official FAST_LIO repo or below origin read for more detail]</summary>
+
 ## Related Works and Extended Application
 
 **SLAM:**
@@ -205,3 +263,5 @@ The main structure of this UAV is 3d printed (Aluminum or PLA), the .stl file wi
 ## 6.Acknowledgments
 
 Thanks for LOAM(J. Zhang and S. Singh. LOAM: Lidar Odometry and Mapping in Real-time), [Livox_Mapping](https://github.com/Livox-SDK/livox_mapping), [LINS](https://github.com/ChaoqinRobotics/LINS---LiDAR-inertial-SLAM) and [Loam_Livox](https://github.com/hku-mars/loam_livox).
+
+</details>
