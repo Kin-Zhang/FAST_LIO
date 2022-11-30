@@ -8,3 +8,4 @@ Log/*.pdf
 PCD/*.pcd
 .vscode/
 logs*
+launch/scripts/LOGGING

@@ -17,6 +17,12 @@ I modified a little, delete the livox code that no those extra driver dependence
   curl -sL https://raw.githubusercontent.com/Kin-Zhang/Kin-Zhang/main/Dockerfiles/setup_lib.sh | bash
   ```
 
+- ffmpeg: if you want to run the script and record things
+
+  ```bash
+  sudo apt-get install ffmpeg
+  ```
+
 ## Build
 
 ```bash
@@ -45,6 +51,24 @@ You will see the pop up rviz window like this one:
 ![](doc/example_NTUViral.png)
 
 ## RUN ALL
+
+There are several changed need be done based on your own env:
+
+```bash
+source /home/$USER/workspace/FAST_LIO_ws/devel/setup.bash # TODO: Please change this one based on your env
+export EPOC_DIR=/home/$USER/bags/results/ntuviral_fastlio # TODO: Please change this one based on your env
+export DATASET_LOCATION=/home/$USER/bags/ntu_viral/ # TODO: Please change this one based on your env
+```
+
+With all paths correct, please directly run the scripts:
+
+```bash
+cd /home/kin/workspace/FAST_LIO_ws/src/FAST_LIO/launch/scripts
+chmod +x *
+./runall_ntuviral.sh 
+```
+
+And it will autonmatically run all seq in the scripts, please check/comment something if you want to change:
 
 
 
