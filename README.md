@@ -68,11 +68,21 @@ chmod +x *
 ./runall_ntuviral.sh 
 ```
 
-And it will autonmatically run all seq in the scripts, please check/comment something if you want to change:
+And it will automatically run all seq in the scripts, please check/comment something if you want to change in the scripts: [runall_ntuviral.sh](launch/scripts/runall_ntuviral.sh)
 
+results table here, others result directly copy from [NTUViral Dataset Paper:](https://github.com/ntu-aris/ntu_viral_dataset/blob/gh-pages/docs/NTU_VIRAL_Dataset_Submission.pdf) [IJRR 2021, arxiv link](https://arxiv.org/abs/2202.00379)
 
-
-
+| Dataset | VINSFusion |    LIOSAM     | MLOAM  | VIRALSLAM  | FASTLIO*      |
+| :-----: | :--------: | :-----------: | :----: | :--------: | :------------ |
+| eee\_01 |   0\.608   | <u>0\.075</u> | 0\.249 | **0\.060** | 0\.131        |
+| eee\_02 |   0\.506   | <u>0\.069</u> | 0\.166 | **0\.058** | 0\.124        |
+| eee\_03 |   0\.494   | <u>0\.101</u> | 0\.232 | **0\.037** | 0\.163        |
+| nya\_01 |   0\.397   | <u>0\.076</u> | 0\.123 | **0\.051** | 0\.122        |
+| nya\_02 |   0\.424   | <u>0\.090</u> | 0\.191 | **0\.043** | 0\.142        |
+| nya\_03 |   0\.787   | <u>0\.137</u> | 0\.226 | **0\.032** | 0\.144        |
+| sbs\_01 |   0\.508   | <u>0\.089</u> | 0\.173 | **0\.048** | 0\.142        |
+| sbs\_02 |   0\.564   | <u>0\.083</u> | 0\.147 | **0\.062** | 0\.140        |
+| sbs\_03 |   0\.878   |    0\.140     | 0\.153 | **0\.054** | <u>0\.133</u> |
 
 
 
