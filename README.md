@@ -13,7 +13,10 @@ I modified a little, delete the livox code that no those extra driver dependence
 - glog, gflag: for debug, install it quickly with command here:
 
   ```bash
-  # maybe need sudo if you are running it in your desktop
+  # maybe need sudo password if you are running it in your desktop
+  curl -sL https://raw.githubusercontent.com/Kin-Zhang/Kin-Zhang/main/Dockerfiles/installGlog_ownenv.sh | bash
+  
+  # option!! for docker env or already root autho
   curl -sL https://raw.githubusercontent.com/Kin-Zhang/Kin-Zhang/main/Dockerfiles/setup_lib.sh | bash
   ```
 
@@ -26,7 +29,7 @@ I modified a little, delete the livox code that no those extra driver dependence
 ## Build
 
 ```bash
-cd ~/workspace/FAST_LIO/src
+mkdir $HOME/workspace/FAST_LIO/src && cd $HOME/workspace/FAST_LIO/src
 git clone https://github.com/Kin-Zhang/FAST_LIO.git
 cd FAST_LIO
 git submodule update --init
